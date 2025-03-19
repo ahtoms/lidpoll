@@ -11,7 +11,7 @@ LID_PATH = sys.argv[2]
 PYTHON_CMD = "python {} {}".format(SCRIPT_LOC, LID_PATH)
 
 script = """
-PIDLOCK_FILE='~/.lid_poll.pidlock'
+PIDLOCK_FILE="$HOME/.lid_poll.pidlock"
 if test -f $PIDLOCK_FILE; then
   PIDLOCK_PID=$(cat $PIDLOCK_FILE)
   kill -0 $PIDLOCK_PID
