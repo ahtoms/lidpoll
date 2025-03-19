@@ -114,7 +114,6 @@ def start_watcher():
 
     if arglen == 2:
         argpath = sys.argv[1]
-        #sel = selectors.DefaultSelector()
         (watchfile, isvalid) = open_file(argpath)
 
         if isvalid:
