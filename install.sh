@@ -15,7 +15,7 @@ if test -d $ACPI_LID_PATH; then
     LID_STATE_PATH="$ACPI_LID_PATH/$ACPI_LID_ENTRY/state"
     GEN_OUTPUT=$(python gen_script.py $RUNCMD_DIR/lidpoll.py $LID_STATE_PATH)
     CMDRC_OUT="$RUNCMD_DIR/lidpoll_start.sh"
-    cp lidpoll.py $RUNCMD_DIR/lidpoll.py
+    cp lidpoll/lidpoll.py $RUNCMD_DIR/lidpoll.py
     echo $GEN_OUTPUT > $RUNCMD_DIR/lidpoll_start.sh
     echo "Add '$CMDRC_OUT 2> /dev/null' to your run-command file (Example: .bashrc/.zshrc)"
     
